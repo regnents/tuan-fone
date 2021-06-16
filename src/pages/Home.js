@@ -1,6 +1,7 @@
 import { Button, Typography, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   const useStyle = makeStyles(() => ({
@@ -22,6 +23,7 @@ export default function Home() {
   const classes = useStyle();
   return (
     <div className="Home">
+      <Navbar />
       <Grid
         container
         spacing={0}
