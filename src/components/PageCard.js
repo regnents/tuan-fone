@@ -1,15 +1,12 @@
 import React from "react";
 import {
-  Button,
   Card, 
-  CardActions,
   CardActionArea,
   CardContent,
   CardMedia,
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import CardPic from "../assets/CarPic.jpg";
 import { Link } from "react-router-dom";
 
 export default function PageCard(props) {
@@ -31,7 +28,6 @@ export default function PageCard(props) {
   });
 
   const classes = useStyles();
-  console.log(CardPic)
 
   return (
     <div className="PageCard">
