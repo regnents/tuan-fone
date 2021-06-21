@@ -1,6 +1,7 @@
 import React from "react";
 import {
-  Card, 
+  Box,
+  Card,
   CardActionArea,
   CardContent,
   CardMedia,
@@ -16,7 +17,7 @@ export default function PageCard(props) {
       maxWidth: 300,
     },
     rootHeight: {
-      height: '100%'
+      height: "100%",
     },
     media: {
       height: 200,
@@ -36,7 +37,9 @@ export default function PageCard(props) {
           <Link to={link} className={classes.textNoDecoration}>
             <CardMedia image={pic} className={classes.media} />
             <CardContent>
-              <Typography>{title}</Typography>
+              <Typography component="div">
+                <Box fontSize={20} fontWeight={500}>{title}</Box>
+              </Typography>
               <Typography>{desc}</Typography>
             </CardContent>
           </Link>

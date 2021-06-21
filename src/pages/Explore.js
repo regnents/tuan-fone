@@ -10,22 +10,22 @@ export default function Explore() {
     {
       id: 1,
       title: "Drivers",
-      desc: "See the info about the driver in the 2020 season.",
+      desc: "See all the info about the driver in the 2020 season.",
       link: "/Drivers",
       pic: DrivePic,
     },
     {
       id: 2,
       title: "Constructors",
-      desc: "See the info about the constructor in the 2020 season.",
+      desc: "See all the info about the constructor in the 2020 season.",
       link: "/Constructors",
       pic: CardPic,
     },
     {
       id: 3,
-      title: "Circuits",
-      desc: "See the info about the Circuits in the 2020 season.",
-      link: "/Circuits",
+      title: "Races",
+      desc: "See all the info about the Races in the 2020 season.",
+      link: "/Races",
       pic: CircuitPic,
     },
   ];
