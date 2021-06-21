@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
-import { Typography } from "@material-ui/core";
+import { Box, Container } from "@material-ui/core";
+import DriverData from "../components/DriverData";
 
 export default function Drivers() {
   const [drivers, setDrivers] = useState(null);
@@ -10,19 +10,22 @@ export default function Drivers() {
       .then((response) => response.json())
       .then((data) => {
         const driversdata = data.MRData.DriverTable.Drivers;
+        // console.log(driversdata);
         setDrivers(driversdata);
       });
   }, []);
 
   return (
     <div>
-      <Typography>Hello there</Typography>
-      {drivers &&
-        drivers.map((driver) => (
-          <div key={driver.driverId}>
-            {driver.givenName} {driver.familyName}
-          </div>
-        ))}
+      <Box mt={3}>
+        {drivers && (
+          <Container>
+            {drivers.map((driver) => (
+              <DriverData key={driver.driverId} driver={driver} />
+            ))}
+          </Container>
+        )}
+      </Box>
     </div>
   );
 }
